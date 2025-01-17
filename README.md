@@ -1,43 +1,95 @@
 # Heart Disease
+
 ## Context
-Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year, which accounts for 31% of all deaths worldwide. Four out of 5CVD deaths are due to heart attacks and strokes, and one-third of these deaths occur prematurely in people under 70 years of age. Heart failure is a common event caused by CVDs and this dataset contains 11 features that can be used to predict a possible heart disease.
 
-People with cardiovascular disease or who are at high cardiovascular risk (due to the presence of one or more risk factors such as hypertension, diabetes, hyperlipidaemia or already established disease) need early detection and management wherein a machine learning model can be of great help.
+Cardiovascular diseases (CVDs) are the leading cause of death worldwide, claiming approximately 17.9 million lives annually and accounting for 31% of all global deaths. Four out of five CVD-related deaths result from heart attacks and strokes, with one-third of these deaths occurring prematurely in individuals under 70 years of age. Heart failure, a common outcome of CVDs, underscores the critical need for early detection and treatment. This dataset comprises 11 key features that can be utilized to predict the likelihood of heart disease.
 
-## About the project
+Individuals with cardiovascular diseases or those at high cardiovascular risk—due to factors such as hypertension, diabetes, hyperlipidemia, or pre-existing conditions—require early intervention. Machine learning models can play a crucial role in identifying at-risk individuals and supporting preventive healthcare strategies.
 
-This project aims to predict cardiovascular diseases based on a set of key patient attributes. The considered attributes include:
+## About the Project
 
-Age: age of the patient [years]
+### Objective
 
-Sex: sex of the patient [M: Male, F: Female]
+This project aims to develop a predictive system for cardiovascular diseases using a dataset of patient attributes. By analyzing these attributes, the model can assess a patient's risk of heart-related issues, aiding in early intervention and targeted care.
 
-ChestPainType: chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic]
+### Dataset Features
 
-RestingBP: resting blood pressure [mm Hg]
+Age: Age of the patient (years).
 
-Cholesterol: serum cholesterol [mm/dl]
+Sex: Sex of the patient (M: Male, F: Female).
 
-FastingBS: fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
+ChestPainType: Type of chest pain:
 
-RestingECG: resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by Estes' criteria]
+TA: Typical Angina
 
-MaxHR: maximum heart rate achieved [Numeric value between 60 and 202]
+ATA: Atypical Angina
 
-ExerciseAngina: exercise-induced angina [Y: Yes, N: No]
+NAP: Non-Anginal Pain
 
-Oldpeak: oldpeak = ST [Numeric value measured in depression]
+ASY: Asymptomatic
 
-ST_Slope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]
+RestingBP: Resting blood pressure (mm Hg).
 
-HeartDisease: output class [1: heart disease, 0: Normal]
+Cholesterol: Serum cholesterol level (mg/dl).
 
-### Our approach to achieving this goal involves several crucial steps:
+FastingBS: Fasting blood sugar (1 if > 120 mg/dl, 0 otherwise).
 
-Exploratory Data Analysis: Initially, we conduct a detailed analysis of the available data to better understand its characteristics, identify relevant trends and patterns, and detect potential discrepancies.
+RestingECG: Resting electrocardiogram results:
 
-Data Preprocessing: Data often requires preprocessing to handle missing values, outliers, and improper formatting. In this step, we ensure that the data is ready for use with machine learning algorithms.
+Normal: Normal
 
-Machine Learning: We employ machine learning techniques to develop a predictive model capable of forecasting cardiovascular diseases based on the mentioned features. This includes the proper selection of algorithms, model training, validation, and fine-tuning.
+ST: ST-T wave abnormality (e.g., T wave inversions, ST elevation or depression > 0.05 mV)
 
-The ultimate outcome of this project is a cardiovascular disease prediction system that can be used to assess a patient's risk of developing heart-related issues based on their personal and medical information.
+LVH: Probable/definite left ventricular hypertrophy by Estes' criteria
+
+MaxHR: Maximum heart rate achieved (numeric value between 60 and 202).
+
+ExerciseAngina: Exercise-induced angina (Y: Yes, N: No).
+
+Oldpeak: Depression in ST segment induced by exercise relative to rest (numeric value).
+
+ST_Slope: Slope of the peak exercise ST segment:
+
+Up: Upsloping
+
+Flat: Flat
+
+Down: Downsloping
+
+HeartDisease: Output class:
+
+1: Presence of heart disease
+
+0: Normal
+
+## Approach
+
+### 1. Exploratory Data Analysis (EDA)
+
+Objective: Understand the data distribution, identify patterns and trends, and detect anomalies or missing values.
+
+Key Insights: Using statistical summaries and visualizations, we examined the relationship between various features and the likelihood of heart disease.
+
+### 2. Data Preprocessing
+
+Cleaning: Addressed missing or inconsistent values (e.g., replaced zeros in resting blood pressure and cholesterol with median values).
+
+Encoding: Transformed categorical variables into numerical formats for compatibility with machine learning models.
+
+Scaling: Normalized numerical features to ensure consistent input ranges for machine learning algorithms.
+
+### 3. Machine Learning
+
+Model Selection: Experimented with various machine learning algorithms, including logistic regression, support vector machines (SVM), and random forests.
+
+Hyperparameter Tuning: Used GridSearchCV to optimize model performance.
+
+Evaluation: Assessed models using metrics such as accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrices.
+
+## Results and Implications
+
+Model Performance: The best-performing model achieved high predictive accuracy, demonstrating its reliability in identifying at-risk patients.
+
+Key Predictors: Variables such as Age, ChestPainType, MaxHR, and Cholesterol were strongly correlated with heart disease risk.
+
+Healthcare Impact: Early detection of heart disease risk can lead to timely intervention, potentially reducing morbidity and mortality rates. The model provides a scalable solution for healthcare providers to assess risk factors efficiently.
