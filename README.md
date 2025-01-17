@@ -14,82 +14,82 @@ This project aims to develop a predictive system for cardiovascular diseases usi
 
 ### Dataset Features
 
-Age: Age of the patient (years).
+- Age: Age of the patient (years).
 
-Sex: Sex of the patient (M: Male, F: Female).
+- Sex: Sex of the patient (M: Male, F: Female).
 
-ChestPainType: Type of chest pain:
+- ChestPainType: Type of chest pain:
 
-TA: Typical Angina
+  - TA: Typical Angina
 
-ATA: Atypical Angina
+  - ATA: Atypical Angina
 
-NAP: Non-Anginal Pain
+  - NAP: Non-Anginal Pain
 
-ASY: Asymptomatic
+- ASY: Asymptomatic
 
-RestingBP: Resting blood pressure (mm Hg).
+- RestingBP: Resting blood pressure (mm Hg).
 
-Cholesterol: Serum cholesterol level (mg/dl).
+- Cholesterol: Serum cholesterol level (mg/dl).
 
-FastingBS: Fasting blood sugar (1 if > 120 mg/dl, 0 otherwise).
+- FastingBS: Fasting blood sugar (1 if > 120 mg/dl, 0 otherwise).
 
-RestingECG: Resting electrocardiogram results:
+- RestingECG: Resting electrocardiogram results:
 
-Normal: Normal
+  - Normal: Normal
 
-ST: ST-T wave abnormality (e.g., T wave inversions, ST elevation or depression > 0.05 mV)
+  - ST: ST-T wave abnormality (e.g., T wave inversions, ST elevation or depression > 0.05 mV)
 
-LVH: Probable/definite left ventricular hypertrophy by Estes' criteria
+  - LVH: Probable/definite left ventricular hypertrophy by Estes' criteria
 
-MaxHR: Maximum heart rate achieved (numeric value between 60 and 202).
+- MaxHR: Maximum heart rate achieved (numeric value between 60 and 202).
 
-ExerciseAngina: Exercise-induced angina (Y: Yes, N: No).
+- ExerciseAngina: Exercise-induced angina (Y: Yes, N: No).
 
-Oldpeak: Depression in ST segment induced by exercise relative to rest (numeric value).
+- Oldpeak: Depression in ST segment induced by exercise relative to rest (numeric value).
 
-ST_Slope: Slope of the peak exercise ST segment:
+- ST_Slope: Slope of the peak exercise ST segment:
 
-Up: Upsloping
+  - Up: Upsloping
 
-Flat: Flat
+  - Flat: Flat
 
-Down: Downsloping
+  - Down: Downsloping
 
-HeartDisease: Output class:
+- HeartDisease: Output class:
 
-1: Presence of heart disease
+  - 1: Presence of heart disease
 
-0: Normal
+  - 0: Normal
 
 ## Approach
 
 ### 1. Exploratory Data Analysis (EDA)
 
-Objective: Understand the data distribution, identify patterns and trends, and detect anomalies or missing values.
+<b>Objective:</b> Understand the data distribution, identify patterns and trends, and detect anomalies or missing values.
 
-Key Insights: Using statistical summaries and visualizations, we examined the relationship between various features and the likelihood of heart disease.
+<b>Key Insights:</b> Using statistical summaries and visualizations, we examined the relationship between various features and the likelihood of heart disease.
 
 ### 2. Data Preprocessing
 
-Cleaning: Addressed missing or inconsistent values (e.g., replaced zeros in resting blood pressure and cholesterol with median values).
+- <b>Cleaning:</b> Addressed missing or inconsistent values (e.g., replaced zeros in resting blood pressure and cholesterol with median values).
 
-Encoding: Transformed categorical variables into numerical formats for compatibility with machine learning models.
+- <b>Encoding:</b> Transformed categorical variables into numerical formats for compatibility with machine learning models.
 
-Scaling: Normalized numerical features to ensure consistent input ranges for machine learning algorithms.
+- <b>Scaling:</b> Normalized numerical features to ensure consistent input ranges for machine learning algorithms.
 
 ### 3. Machine Learning
 
-Model Selection: Experimented with various machine learning algorithms, including logistic regression, support vector machines (SVM), and random forests.
+- <b>Model Selection:</b> Experimented with various machine learning algorithms, including logistic regression, support vector machines (SVM), and random forests.
 
-Hyperparameter Tuning: Used GridSearchCV to optimize model performance.
+- <b>Hyperparameter Tuning:</b> Used GridSearchCV to optimize model performance.
 
-Evaluation: Assessed models using metrics such as accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrices.
+- <b>Evaluation:</b> Assessed models using metrics such as accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrices.
 
 ## Results and Implications
 
-Model Performance: The best-performing model achieved high predictive accuracy, demonstrating its reliability in identifying at-risk patients.
+- <b>Model Performance:</b> The best-performing model achieved high predictive accuracy, demonstrating its reliability in identifying at-risk patients.
 
-Key Predictors: Variables such as Age, ChestPainType, MaxHR, and Cholesterol were strongly correlated with heart disease risk.
+- <b>Key Predictors:</b> Variables such as Age, ChestPainType, MaxHR, and Cholesterol were strongly correlated with heart disease risk.
 
-Healthcare Impact: Early detection of heart disease risk can lead to timely intervention, potentially reducing morbidity and mortality rates. The model provides a scalable solution for healthcare providers to assess risk factors efficiently.
+- <b>Healthcare Impact:</b> Early detection of heart disease risk can lead to timely intervention, potentially reducing morbidity and mortality rates. The model provides a scalable solution for healthcare providers to assess risk factors efficiently.
