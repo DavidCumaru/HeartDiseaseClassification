@@ -1,5 +1,7 @@
 # Heart Disease
 
+![Descrição da imagem](img/Heart_Disease.jpg)
+
 ## Context
 
 Cardiovascular diseases (CVDs) are the leading cause of death worldwide, claiming approximately 17.9 million lives annually and accounting for 31% of all global deaths. Four out of five CVD-related deaths result from heart attacks and strokes, with one-third of these deaths occurring prematurely in individuals under 70 years of age. Heart failure, a common outcome of CVDs, underscores the critical need for early detection and treatment. This dataset comprises 11 key features that can be utilized to predict the likelihood of heart disease.
